@@ -1,0 +1,143 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:rgba(125, 100, 137, 0.74);
+
+    font-family:"Palatino Linotype";
+    font-style: italic;
+
+}
+
+header{
+
+    height:120px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.butterfly{
+
+    position:relative;
+
+    width:150px;
+    height:120px;
+
+}
+
+.body{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:28px;
+
+    z-index:10;
+
+}
+
+.leftWing{
+
+    position:absolute;
+
+    left:4.4px;
+    top:8px;
+
+    width:72px;
+
+    transform-origin:right center;
+}
+
+.rightWing{
+
+    position:absolute;
+
+    right:4.4px;
+    top:7px;
+
+    width:72px;
+    height: 110px;
+
+    transform-origin:left center;
+}
+
+.leftWing.flap{
+
+    animation:leftFlap .45s ease-in-out 4;
+
+}
+
+.rightWing.flap{
+
+    animation:rightFlap .45s ease-in-out 4;
+
+}
+
+@keyframes leftFlap{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:rotate(10deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+@keyframes rightFlap{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:rotate(-10deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
